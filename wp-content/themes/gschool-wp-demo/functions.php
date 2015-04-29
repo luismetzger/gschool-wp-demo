@@ -51,6 +51,8 @@ function gschool_wp_demo_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'gschool-wp-demo' ),
+		'footer' => __( 'Footer Menu', 'gschool-wp-demo' ),  // Footer menu
+		'social' => __( 'Social Menu', 'gschool-wp-demo' ),   // If you want to use a social menu
 	) );
 
 	/*
@@ -101,6 +103,8 @@ add_action( 'widgets_init', 'gschool_wp_demo_widgets_init' );
  */
 function gschool_wp_demo_scripts() {
 	wp_enqueue_style( 'gschool-wp-demo-style', get_stylesheet_uri() );
+	
+	wp_enqueue_style( 'wp_custom', get_template_directory_uri() . '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,700,300' );
 
 	wp_enqueue_script( 'gschool-wp-demo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

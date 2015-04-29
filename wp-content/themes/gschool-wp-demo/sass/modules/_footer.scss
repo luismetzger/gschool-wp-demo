@@ -1,0 +1,92 @@
+#colophon {
+	background: $mainbackground;
+	padding: 1em 0;
+}
+
+#footer-logo {
+	
+	width: 100px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em 0;
+    display: none;
+}
+
+// --- Footer Navigation --- //
+#menu-footer-navigation {
+	text-align: center;
+	display: none;
+
+	.menu {
+		margin: 0.4em 0 0;
+	}
+
+	.menu-item {
+		display: inline-block;
+		margin-left: 1em;
+
+		a {
+			color: $white;
+			font-family: $serif;
+			font-weight: 300;
+			font-size: 1.1em;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: darken($mainbackground, 20%);
+			}
+		}
+	}
+}
+
+// --- Social Navigation --- //
+#menu-social-navigation {
+	text-align: center;
+	
+
+	.menu {
+		margin: 0.4em 0 0;
+	}
+
+	.menu-item {
+		display: inline-block;
+		margin-left: 1em;
+
+		a {
+			color: $white;
+			font-family: $serif;
+			font-weight: 300;
+			font-size: 1.1em;
+			text-decoration: none;
+			background: $white;
+			border-radius: 25px;
+			
+
+			&:hover {
+				color: $white;
+			}
+		i._mi {
+				color: $mainbackground;
+				width: 60px;
+				
+			&:hover {
+					background: $mainbackground;
+					color: $white;
+					@include ease;
+				}
+			}
+			
+		
+		}
+	}
+}
+
+// --- Copyright -- //
+.site-info {
+	p {
+		color: $white;
+		text-align: right;
+	}
+}

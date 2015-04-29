@@ -1,0 +1,49 @@
+#masthead {
+	background: $mainbackground;
+	padding: 1em 0;
+}
+
+#header-logo {
+	
+	width: 100px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em 0;
+}
+
+
+
+// --- Navigation --- //
+#site-navigation {
+	text-align: center;
+
+	.menu {
+		margin: 0.4em 0 0;
+	}
+
+	.menu-item {
+		display: inline-block;
+		margin-left: 1em;
+
+		a {
+			color: $white;
+			font-family: $serif;
+			font-weight: 300;
+			font-size: 1.1em;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:hover {
+				color: darken($mainbackground, 20%);
+			}
+		}
+	}
+}
+
+// Mobile Menu
+.menu-toggle {
+	display: none;
+}
+
+
