@@ -317,7 +317,10 @@ a {
 #cd-nav li a {
   display: block;
   padding: 1.6em;
-  border-bottom: 1px solid #eff2f6; }
+  border-bottom: 1px solid #eff2f6;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 333ms ease-in-out; }
 #cd-nav li:last-child a {
   border-bottom: none; }
 @media only screen and (min-width: 1170px) {
@@ -894,3 +897,13 @@ a {
 
 .product-description {
   padding: 0 20px; }
+
+body.post-type-archive-product #main {
+  background: #ffffff; }
+  body.post-type-archive-product #main .row .column {
+    margin-bottom: 1.1em;
+    padding: 12px; }
+    body.post-type-archive-product #main .row .column:nth-child(3n) {
+      margin-right: 0; }
+  body.post-type-archive-product #main .product-headline {
+    text-align: center; }

@@ -1,0 +1,39 @@
+body.post-type-archive-product {
+	
+#main {
+	
+	background: $white;
+	
+	.row {
+		
+		.column {
+			margin-bottom: 1.1em;
+			padding: 12px;
+	
+			// Every third column has no left margin
+				&:nth-child(3n) { 
+				
+					margin-right: 0; 
+			
+				}	
+			}
+		}
+		
+	.product-headline {
+		
+		text-align: center;
+		
+	}	
+		
+		
+		
+		
+				
+	}
+	
+	
+	
+	
+	
+	
+}
