@@ -107,8 +107,13 @@ function gschool_wp_demo_scripts() {
 	wp_enqueue_style( 'wp_custom', get_template_directory_uri() . '//fonts.googleapis.com/css?family=Roboto+Slab:400,100,700,300' );
 
 	wp_enqueue_script( 'gschool-wp-demo-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
+	
 	wp_enqueue_script( 'gschool-wp-demo-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js');
+	
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js');
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

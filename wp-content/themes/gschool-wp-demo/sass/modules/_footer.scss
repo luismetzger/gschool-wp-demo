@@ -58,10 +58,10 @@
 			color: $white;
 			font-family: $serif;
 			font-weight: 300;
-			font-size: 1.1em;
-			text-decoration: none;
-			background: $white;
-			border-radius: 25px;
+			font-size: 3em;
+			  text-decoration: none;
+			  background: $white;
+			  border-radius: 50px;
 			
 
 			&:hover {
@@ -70,6 +70,7 @@
 		i._mi {
 				color: $mainbackground;
 				width: 60px;
+				font-size: .9em;
 				
 			&:hover {
 					background: $mainbackground;
@@ -85,8 +86,11 @@
 
 // --- Copyright -- //
 .site-info {
+	  margin-top: -46px;
 	p {
 		color: $white;
-		text-align: right;
+		text-align: left;
+		font-size: .3em;
+		padding: 0 160px;
 	}
 }

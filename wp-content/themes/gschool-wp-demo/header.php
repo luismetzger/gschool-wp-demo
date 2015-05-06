@@ -25,14 +25,19 @@
 		<div class="row">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-    <img id="header-logo" src="<?php bloginfo('template_directory'); ?>/images/frank-relish.svg" alt="Your Image Description Here" />
+    <img id="header-logo" src="<?php bloginfo('template_directory'); ?>/images/cd-logo.svg" alt="Your Image Description Here" />
 </a>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'gschool-wp-demo' ); ?></button>
+		<div id="cd-nav">
+		<a href="#0" class="menu-toggle cd-nav-trigger" aria-controls="primary-menu" aria-expanded="false">Menu<span></span><?php _e( 'Primary Menu', 'gschool-wp-demo' ); ?></a>
+
+		<nav id="cd-main-nav"  class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</nav>
+	</div>
 		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		
+		

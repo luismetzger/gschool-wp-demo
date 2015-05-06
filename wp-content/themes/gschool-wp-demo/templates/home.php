@@ -14,9 +14,36 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				
-				<div class="hero" style="background-image: url(<?php the_field('hero_background_image'); ?>);">
-				    <h1><?php the_field('hero_headline'); ?></h1>
-				    <p><?php the_field('hero_subheadline'); ?></p>
+				<div class="home-products">
+				    <form class="watchlist">
+						<ul class="product-list">
+							
+							<?php 
+								$args = array(
+									'post_type' => 'product',
+									'posts_per_page' => 4
+								);
+								$loop = new WP_Query( $args );
+								while ( $loop->have_posts() ) : $loop->the_post();
+								?>
+							
+							<li>
+								<img class="product-icon" src="<?php the_field('product_icon'); ?>">
+								   <h3 class="product-title"><?php the_title(); ?></h3>
+								     <p class="product-description"><?php the_field('product_description'); ?></p>
+							    <div class="price">
+								    <h3 class="product-price">$<?php the_field('product_price'); ?></h3>
+							    </div>
+								<div class="compare">
+									<button class="checkbox"><input type="checkbox" />Buy Me</button>
+	              				</div>
+							</li>
+              
+							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
+                           
+						</ul>		
+					</form>		    
 				</div>
 			
 
