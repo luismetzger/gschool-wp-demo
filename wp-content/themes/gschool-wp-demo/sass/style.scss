@@ -22,6 +22,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "normalize";
 
 @import "variables";
+@import "buttons";
 @import "mixins";
 @import "grid";
 
@@ -38,3 +39,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // Templates
 @import "templates/home";
 @import "templates/archive-product";
+
+

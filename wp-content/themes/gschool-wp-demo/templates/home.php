@@ -35,7 +35,7 @@ get_header();
 								    <h3 class="product-price">$<?php the_field('product_price'); ?></h3>
 							    </div>
 								<div class="compare">
-									<button class="checkbox"><input type="checkbox" />Buy Me</button>
+									<button class="button--icon button--green"><i class="fa fa-shopping-cart"></i> Buy Me <input type="checkbox" /></button>
 	              				</div>
 							</li>
               

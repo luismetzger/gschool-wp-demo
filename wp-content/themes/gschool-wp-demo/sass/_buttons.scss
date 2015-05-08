@@ -1,0 +1,206 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto:700,400,300);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+/* Colors from http://clrs.cc/ */
+
+$default: #bada55;
+
+$red:     #FF4136;
+$orange:  #FF851B;
+$yellow:  #FFDC00;
+$lime:    #01FF70;
+$green:   #2ECC40;
+$olive:   #3D9970;
+$teal:    #39CCCC;
+$aqua:    #7FDBFF;
+$blue:    #0074D9;
+$purple:  #B10DC9;
+$fuchsia: #F012BE;
+$maroon:  #85144B;
+$navy:    #001F3F;
+$black:   #333;
+$gray:    #888;
+$white:   #eee;
+
+$font-stack: 'Roboto', sans-serif;
+$border-radius: 0;
+
+
+
+//Social buttons 
+
+$color-set: (
+  facebook:#3B5998,
+    email: #3B5998, 
+    twitter: #56A3D9,
+    youtube: #BF221F, 
+    instagram: #3F6497, 
+    foursquare: #0732A2,
+    linkedin: #007BB6,
+    stack-overflow: #FA5601,
+    codepen: #252527,
+    cv:#B4E0E1
+);
+
+$socialsize:4.6rem;
+$socialmargin:0.4rem;
+$socialcount:9;
+
+
+.social-cont {
+  font-size:$socialsize;
+  text-align: center;
+  margin:20px auto;
+  width: 30rem;
+/*  width:($socialsize * 1.5) * ($socialcount) + ($socialmargin * $socialcount * 2) - ($socialmargin * 2);  */
+  overflow:auto;
+  
+  .social-box {
+    float:left;
+    overflow:hidden;
+    border-radius:$socialsize/8;
+    margin:0 $socialmargin;
+    width:$socialsize*1.5;
+    height:$socialsize*1.5;
+    a {
+      display:block;
+      width: 100%;
+      height: 100%;
+      
+      
+      
+      &:hover {
+        i.social-ico {
+          font-size:$socialsize * 1.1;
+          transition:all .5s cubic-bezier(1, 0, 0, 1);
+        }
+      }
+    }
+    &:first-child {
+      margin-left:0;
+    }
+    
+    &:last-child {
+      margin-right:0;
+    }
+    i {
+    line-height:$socialsize*1.5;
+      }
+  }
+  i.social-ico {
+    color:white;
+    transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+
+// Rating Buttons
+
+ .hidden-input {
+    position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);
+  }
+  .ratings-box {
+    position: relative;
+    margin: 25px auto;
+    width: 60%;
+    padding: 20px;
+    background: white;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    
+    p {
+      text-transform: capitalize;
+    }
+    label {
+      font-size: 2em;
+      position: relative;
+      cursor: pointer;
+      color: $text;
+      text-align: center;
+      border-radius: 5px;
+      
+      @media screen and (max-width: $M) {
+	      font-size: 1.5em;
+      }
+      
+      &:after {
+        content: "★";
+        -webkit-transform: scale(6);
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        transition: all .4s ease;
+        opacity: 0;
+        color: inherit;
+        visibility: hidden; 
+      }
+    }
+    input + label:before{
+      content: "\2605";
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      transition: opacity .3s ease-in-out, color .3s ease-in-out;
+      backface-visibility:hidden;
+      -webkit-backface-visibility:hidden;
+      -moz-backface-visibility:hidden;
+      -ms-backface-visibility:hidden;
+    }
+    input + label:hover:before,
+    input + label:hover ~ label:before {
+        opacity: 1;
+    }
+    input + label:nth-of-type(1):after,
+    input + label:nth-of-type(1):before,
+    input + label:nth-of-type(1):hover:before,
+    input + label:nth-of-type(1):hover ~ label:before,
+    input:nth-of-type(1):checked ~ label:before {
+        // green
+        color: #2ecc71;
+    }
+    input + label:nth-of-type(2):after,
+    input + label:nth-of-type(2):before,
+    input + label:nth-of-type(2):hover:before,
+    input + label:nth-of-type(2):hover ~ label:before,
+    input:nth-of-type(2):checked ~ label:before {
+        // yellow
+        color: #f1c40f;
+    }
+    input + label:nth-of-type(3):after,
+    input + label:nth-of-type(3):before,
+    input + label:nth-of-type(3):hover:before,
+    input + label:nth-of-type(3):hover ~ label:before,
+    input:nth-of-type(3):checked ~ label:before {
+        // orange
+        color: #e67e22;
+    }
+    input + label:nth-of-type(4):after,
+    input + label:nth-of-type(4):before,
+    input + label:nth-of-type(4):hover:before,
+    input + label:nth-of-type(4):hover ~ label:before,
+    input:nth-of-type(4):checked ~ label:before {
+        // red
+        color: #e74c3c;
+    }
+    input + label:nth-of-type(5):after,
+    input + label:nth-of-type(5):before,
+    label:nth-of-type(5):hover:before,
+    input:nth-of-type(5):checked ~ label:before {
+        // ruby
+        color: #c0392b;
+    }
+    label:nth-of-type(5):hover:before {
+        color: #d35400 !important;
+    }    
+    input:checked + label:after{
+      visibility: visible;
+      -webkit-transform: scale(1);
+      opacity: 1;
+    } 
+    input:checked ~ label:before{
+        opacity: 1;
+    }
+  } 

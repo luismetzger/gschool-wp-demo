@@ -1,0 +1,1 @@
+$('input[type="radio"]').on("click",function(){var i=$(this).val(),t=".ratings-box p";$(t).html(i)});

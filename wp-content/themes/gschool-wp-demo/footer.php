@@ -25,7 +25,28 @@
 			    <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 			    
 			   
-			    <?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+			 <?php /* wp_nav_menu( array( 'theme_location' => 'social' ) );  */ ?>
+			 
+			 
+			 <div class="social-cont">
+			<div class="social-box facebook">
+				<a href="https://www.facebook.com/valerio.pierbattista" target="_blank"> <i class="fa social-ico fa-facebook"> </i> </a>
+			</div>
+
+			<div class="social-box twitter">
+				<a href="https://twitter.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-twitter"> </i> </a>
+			</div>
+
+			<div class="social-box youtube">
+				<a href="https://www.youtube.com/user/valeriopierbattista" target="_blank"> <i class="fa social-ico fa-youtube"> </i> </a>
+			</div>
+
+			<div class="social-box instagram">
+				<a href="http://instagram.com/vlrprbttst" target="_blank"> <i class="fa social-ico fa-instagram"> </i> </a>
+			</div>
+			 </div><!-- End of Social Buttons -->
+			
+			
 		    </div>
 			    
 			    

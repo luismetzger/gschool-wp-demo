@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18917",
+"creatorBuild": "18966",
 "files": {
 	"\/index.php": {
 		"fileType": 8192,
@@ -21693,6 +21693,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/wp-content\/themes\/gschool-wp-demo\/js\/min\/ratings-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/min\/ratings-min.js",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/min\/min\/ratings-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/wp-content\/themes\/gschool-wp-demo\/js\/min\/skip-link-focus-fix-min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -21721,6 +21732,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/navigation.js",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/min\/navigation-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/gschool-wp-demo\/js\/ratings.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/ratings.js",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/js\/min\/ratings-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -21793,6 +21815,22 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/themes\/gschool-wp-demo\/sass\/_buttons.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/sass\/_buttons.scss",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/gschool-wp-demo\/css\/_buttons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
 		},
 	"\/wp-content\/themes\/gschool-wp-demo\/sass\/_grid.scss": {
 		"createSourceMap": 0,
@@ -28632,7 +28670,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "gschool-wp-demo",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "globe_gray"
 	},
 "projectSettings": {

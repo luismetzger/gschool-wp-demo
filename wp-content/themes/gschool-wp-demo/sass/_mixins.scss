@@ -100,3 +100,144 @@ $breakpoints: (
 @mixin border-radius($radius:.25em) {
   border-radius: $radius;
 }
+
+
+/* Begin button styles */
+
+@mixin button($color) {
+  background-color: $color;
+  box-shadow: 0 2px 0 shade($color, 15%);
+  &:hover, &:focus {
+    background-color: tint($color, 25%);
+  }
+  &:active {
+    background-color: $color;
+  }
+}
+
+.button,
+[class*='button--'] {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 16px 20px 0; /* REM fallback */
+  margin: 0 1rem calc(1rem + 4px) 0; /* Account for extra height from box shadow */
+  padding: 1em 2em;
+  font-weight: 200;
+  text-decoration: none;
+  color: white;
+  border-radius: $border-radius;
+  transition: all .25s;
+  transform: translate(0, -2px);
+  &:hover, &:focus {
+    color: white;
+    outline: none;
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+  @include button($default); 
+}
+
+.button--red     { @include button($red); }
+.button--orange  { @include button($orange); }
+.button--yellow  { @include button($yellow); }
+.button--lime    { @include button($lime); }
+.button--green   { @include button($green); }
+.button--olive   { @include button($olive); }
+.button--teal    { @include button($teal); }
+.button--aqua    { @include button($aqua); }
+.button--blue    { @include button($blue); }
+.button--purple  { @include button($purple); }
+.button--fuchsia { @include button($fuchsia); }
+.button--maroon  { @include button($maroon); }
+.button--navy    { @include button($navy); }
+.button--black   { @include button($black); }
+.button--gray    { @include button($gray); }
+.button--white   { @include button($white); }
+
+/* Make text dark on buttons that have light background-colors */
+
+.button--yellow,
+.button--lime,
+.button--aqua,
+.button--white {
+  color: rgba(black, 0.5);
+  &:hover {
+    color: rgba(black, 0.5);
+  }
+}
+
+/* Sizes */
+
+.button--large {
+  font-size: 32px;
+  font-size: 2rem;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.button--small {
+  font-size: 13px;
+  font-size: .8rem;
+  padding: .5em 1.5em;
+}
+
+/* Alignment */
+
+.button--align-top { vertical-align: top; }
+.button--align-bottom { vertical-align: bottom; }
+
+/* Icons */
+
+.button--icon {
+  padding-left: 4em;
+  padding-right: 1em;
+  > i {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    margin-top: -.5em;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3em;
+    border-radius: $border-radius 0 0 $border-radius;
+    box-shadow: 0 2px 0 rgba(black, .25);
+    background-color: rgba(black, .25);
+    transition: all .25s;
+  }
+  &:hover:before {
+    box-shadow: none;
+  }
+}
+
+
+// Social Buttons
+
+@function makelongshadow($the-color) {
+  $val: 0px 0px $the-color;
+  @for $i from 1 through 50 {
+    $val: #{$val}, #{$i}px #{$i + 1}px #{$the-color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($the-color) {
+  text-shadow: makelongshadow($the-color);
+}
+
+
+    @each $color-class, $the-color in $color-set {
+      
+    .social-cont div.social-box.#{$color-class} {
+      background: $the-color;
+      i.social-ico {
+        
+            @include longshadow(darken($the-color,10%));
+      } 
+    } //social-cont span
+    } //end of loop
